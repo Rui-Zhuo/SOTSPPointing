@@ -71,10 +71,14 @@ def denanify(X):
     return X
 
 if __name__ == "__main__":
-    srcUpdate = "dataSample/update/"
-    srcPrev = "dataSample/original/"
-    srcHMI = "dataSample/HMI/"
+    srcUpdate = "SOTSPPointing/dataSample/update/"
+    srcPrev = "SOTSPPointing/dataSample/original/"
+    srcHMI = "SOTSPPointing/dataSample/HMI/"
     fn = "20160913_084504.fits"
+    # srcUpdate = 'E:/HinodeSOTSPLevel2Update/Main/'
+    # srcPrev = 'E:/Research/Data/HINODE/SP/L2/'
+    # srcHMI = 'E:/Research/Data/SDO/HMI/Field/FIAD/'
+    # fn = "20140101_032208.fits"
 
     target = "alignmentVis/"
 
@@ -147,6 +151,7 @@ if __name__ == "__main__":
 
 
     hmiFieldName = os.path.join(srcHMI, "hmi.B_720s."+regDate+"_TAI.field.fits")
+    # hmiFieldName = os.path.join(srcHMI, "hmi.B_720s.20140101_032400_TAI.field.fits")
     if not os.path.exists(hmiFieldName):
         print("Can't find hmi file %s" % hmiFieldName)
         print("You'll need the HMI file from which the pointing was derived")
